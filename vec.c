@@ -19,6 +19,6 @@ int dotVec (Vec3d a, Vec3d b)
 
 Vec3d crossVec(Vec3d a, Vec3d b)
 {
-    Vec3d ret = {a.y * b.z - a.z * b.y, a.z * b.x - a.x * b.z, a.x * b.y, a.x * b.y - a.y * b.x};
+    Vec3d ret = {a.y * b.z - a.z * b.y, a.z * b.x - a.x * b.z, a.x * b.y - a.y * b.x};
     return ret;
 }
