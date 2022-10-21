@@ -1,13 +1,12 @@
 CC = gcc
 
-makeVec: main.o vec.o
-	$(CC) -o test main.o vec.o
+DEPS = main.o vec.o
 
-main.o: main.c 
-	$(CC) -c main.c
+makeVec: $(DEPS)
+	$(CC) -o test $^
 
-vec.o: vec.c vec.h
-	$(CC) -c vec.c
+%.o: %.c
+	$(CC) -c $^
 
 clean: 
 	del *.o
